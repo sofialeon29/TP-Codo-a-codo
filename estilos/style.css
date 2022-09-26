@@ -1,0 +1,52 @@
+.texto {
+    margin-left: 50%;
+}
+
+.button {
+    margin-bottom: 20%;
+}
+
+.cartas {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 19%;
+    margin-right:19%;
+}
+
+.botones {
+    margin-top: 10%;
+    border:none;
+    font-weight: bolder;
+    height: 25px;
+}
+
+.texto1 {
+    font-size: 92%;
+}
+
+.cuadro {
+    font-size: 130%;
+}
+
+.enviar {
+    background-color: rgb(132, 195, 37);
+    font-size: larger;
+}
+
+.formulario {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+footer {
+background-color:rgb(26, 57, 107);
+}
+
+.piedepagina {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: small;
+}
