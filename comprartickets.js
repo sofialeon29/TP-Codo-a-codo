@@ -1,35 +1,39 @@
+
 function Montototal(cantidad, categoria) {
     const costoticket = 200;
-    let costototal = cantidad * costoticket;
+    let total = cantidad * costoticket;
 
     switch (categoria) {
         case "Estudiante":
-            total = total * (1 - 0.80)
+            total = total * (1 - 0.80);
             break;
         case "Trainee":
-            total = total * (1 - 0.50)
+            total = total * (1 - 0.50);
             break;
         case "Junior":
-            total = total * (1 - 0.15)
+            total = total * (1 - 0.15);
             break;
     }
-    return total
+    return total;
 }
 
-let boton = document.getElementById("resumen")
 
-let formulario =document.getElementById("formulario")
+document.getElementById("cantidad").addEventListener("change", myFunction);
+document.getElementById("categoria").addEventListener("change", myFunction);
 
-formulario.addEventListener("submit", (e)=>{
-e.preventDefault();
-})
+let resultado = document.getElementById("resultado");
 
-boton.addEventListener("click", ()=> {
-    let cantidad= document.getElementById("cantidad") .value
-    let categoria= document.getElementById("categoria") .value
+function myFunction() {
+  let cantidad = document.getElementById("cantidad").value;
+  let categoria = document.getElementById("categoria").value;
+  
 
-    let valorfinal= Montototal(cantidad,categoria)
+  if ( (cantidad != "") && (categoria != "") ) {
+    total = Montototal(cantidad, categoria);
+    resultado.innerHTML = "Total a Pagar: $" + total;
+  }
 
-    let mensajetotal= document.getElementById("resultado")
-    mensajetotal= "Total a pagar: $" + valorfinal
-})
+}
+
+
+
